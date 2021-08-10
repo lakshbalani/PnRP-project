@@ -1,0 +1,58 @@
+\documentclass[12pt,two column]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section{Risk Analysis}
+Risk Analysis is a mathematical approach involving the use of various tools to assess and rank risks and formulate methods for resolving them.\\
+For any financial model, risk analysis is essential for handling potential threats and to develop procedures to handle them.\\ \\
+The crucial steps involved in risk analysis are:
+\begin{itemize}
+    \item Identification of risks
+    \item Assessment of risks
+    \item Developing a response strategy
+    \item Monitoring and control
+\end{itemize}
+
+In financial models and simulations, the probability of a variable represents the probability of a random phenomenon that affects the price or determines the level of investment risk.
+\subsection{Measures of Risk}
+\begin{itemize}
+    \item Mean and Variance\\ \\
+    Let X be a random variable.\\ 
+    The mean of X is termed as the expected value of X. It is denoted by $\mu = E[X]$.\\
+    The variance of X is defined as the average of squared difference from mean. It is denoted by $Var[X]=E[(X-\mu)^2]$\\
+    It is often assumed that a factor having more variance has more risk, but it is not a sole factor determining risk.\\ \\
+    Standard deviation of a random variable is the square root of the variance. It is denoted by \\ $\sigma_X=\sqrt{Var[X]}$\\
+    
+    \item Correlation\\ \\
+    It is defined as a measure of dependence between 2 random variables. Its value is between -1 and 1. \\ \\
+    Let us assume 2 stocks A and B. Let the two normal probability distributions corresponding to A and B be $R_A$ and $R_B$, then correlation is measured as\\ \\
+    $\rho_{AB}=\frac{\sigma_{AB}}{\sigma_A\sigma_B}=\frac{E[(R_A-\mu_A)(R_B-\mu_B)]}{\sigma_A\sigma_B}$\\
+    \item Value at risk (VaR)\\ \\
+    It is termed as the worst case scenario for any business model. It is the maximum risk of an investment over a specific interval of time.\\ \\
+    The value of VaR depends on 4 factors:
+    \begin{itemize}
+      \item Investment Value
+      \item Expected volatility
+      \item Confidence level
+      \item Time Horizon
+    \end{itemize}
+\end{itemize}
+
+\bigskip
+\subsection{Monte Carlo Simulation}
+Monte Carlo Simulation is a mathematical algorithm that predicts all the possible outcomes of our decisions, help us analyze the impact of risk and thus making the decision making easier for us under uncertainties.\\ \\
+This technology is used by professionals in a wide range of fields including finance, project management, energy, manufacturing, engineering, research and development, insurance, oil and gas, transportation, and the environment.\\ 
+\subsubsection{Working}
+The Monte Carlo simulation performs a risk analysis by replacing a series of values (probability distribution) with any factor with inherent uncertainty to build a model of possible outcomes. Then he calculates the result over and over again, each time using a different set of random values of the probability function.\\ \\ Depending on the amount of uncertainty and the assigned range, the Monte Carlo simulation can involve thousands or tens of thousands of new calculations before completion. The Monte Carlo simulation produces a distribution of possible result values.
+
+\subsubsection{Various aspects}
+\begin{itemize}
+      \item Explains probability of occurrence of each outcome
+      \item Generates plots for various outcomes
+      \item Analyzes every possible outcome
+      \item Determines which input has the most impact on the overall revenue
+\end{itemize}
+
+\end{document}
