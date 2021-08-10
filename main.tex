@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{ragged2e}
+\usepackage{mathtools}
+\usepackage{geometry}
+
+
+
+\title{PRP Project}
+\author{anish.mathur }
+\date{August 2021}
+
+\begin{document}
+\maketitle
+\section{Geometric Brownian Model}
+
+    Brownian motion, or pedesis, is the random motion of particles suspended in a medium. This pattern of motion typically consists of random fluctuations in a particle's position inside a fluid sub-domain, followed by a relocation to another sub-domain. Each relocation is followed by more fluctuations within the new closed volume.\\ 
+    When we can represent this motion using random processes, we shall be able to apply this concept in different spheres of finance. One of them is prediction of price of equity.\\
+    Whenever we analyze the stock price of any publicly traded company, it is impossible that the graph is uniformly going upwards or downwards such as that of $e^x$. While the stock price generally increases, there are always minor variations, ups and downs, which can be represented with the help of the geometric brownian model.
+    A stochastic process ${B(t),t \ge 0}$ is a Brownian motion (BM) if and only if it satisfies:\\
+    1. For any time points $0 \le t_1 \le t_2 \le t_3 \le t_4$, the increments $B(t_4) - B(t_3)$ and $B(t_2) - B(t_1)$ are independent.\\
+    2. Each increment is a zero-mean Gaussian random variable with variance equals the difference in time:
+    $B(t) - B(s) \sim N (0, t - s)$.\\
+    3. $B(0) = 0$.
+    
+    We also notice that the Brownian Motion is a non-stationary Gaussian process but its increments $B_{t+h} - B_t$ is a stationary Gaussian process keeping t fixed and varying $h \ge 0$.\\
+    We now define a geometric brownian motion as a stochastic process ${S(t), t \ge 0}$ such that:\\
+    \begin{center}
+        $S(t) = S_0.e^{\frac{(\mu - \sigma^2)}{2}t + \sigma B(t)}$, $\forall t \ge 0$
+    \end{center}
+    where ${B(t), t \ge 0}$ is a brownian motion.\\
+    
+    The above formula has practical use as a stock-price model, where $S_0$ is the initial price of the stock, $S(t)$ is the price after t days, $\mu$ is the drift of the stock (the gradual movement of stock towards an equilibrium) and $\sigma$ is the volatility of the stock.\\
+    Now, we can also write the logarithmic return of the stock price as follows:\\
+    \begin{center}
+        $R_{\Delta t}(t) = \ln{\frac{S(t+\Delta t)}{S(t)}}$
+        $= (\mu - \frac{\sigma^2}{2})\Delta t + \sigma[B(t + \Delta t) - B(t)$, $t \ge 0$
+    \end{center}
+    Also $[B(t + \Delta t) - B(t)$ can be represented as a normal distribution with mean 0 and variance $\delta t$, therefore, the distribution of the logarithmic return for the Geometric Brownian Motion can be shown as:\\
+    \begin{center}
+        $R_{\Delta t}(t) \sim N \bigg((\mu - \frac{\sigma^2}{2})\Delta t, \sigma^2\Delta t\bigg)$
+    \end{center}
+    
+    
+
+
+
+
+\end{document}
