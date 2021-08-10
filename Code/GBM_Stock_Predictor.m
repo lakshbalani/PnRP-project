@@ -13,7 +13,7 @@ sigma_1 = 0.5; % defines the volatility of the stock.
 sigma_2 = 0.1; % defines the volatility of the stock.
 sigma_3 = 0.01; % defines the volatility of the stock.
 
-Z = zeros(1,n);% lines 16-18 defines an array of n zeros, which will contain the cumulative sum of change in stock price.
+Z = zeros(1,n);% lines 16-18 defines 3 arrays of n zeros, which will contain the cumulative sum of change in stock price.
 X = zeros(1,n);
 Y = zeros(1,n);
 ds_1 = mu*s_0*dt+sigma_1*s_0*dz; % calculates the change in value of the stock based on the formula used in the Geometric Brownian Model.
